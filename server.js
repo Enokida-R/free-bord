@@ -1,8 +1,8 @@
 const express = require("express");
 const app = express();
 const mongoose = require("mongoose");
-const PORT = 3000;
 const Thread = require("./models/Thread");
+const PORT = process.env.PORT || 3000;
 
 app.use(express.static("public"));
 app.use(express.json()); // これを追加する
@@ -36,6 +36,7 @@ app.post("/api/v1/thread", async(req, res) => {
     res.status(500).json({ message: "Internal server error" });
   }
 });
+
 
 app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);
