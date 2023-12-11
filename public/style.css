@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Arial", sans-serif;
+}
+
+body {
+  width: 100%;
+  min-height: 100vh;
+  overflow-x: hidden;
+  background: linear-gradient(to right, #f6f6f6, #e9e9e9);
+  color: #333;
+  padding: 40px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+* {
+  box-sizing: border-box; /* パディングとボーダーを要素の幅に含める */
+}
+
+.single-thread, .form-section {
+  width: 90%;
+  max-width: 1200px;
+  margin: 30px auto; /* 上下のマージンを指定し、左右は自動で中央揃えに */
+  padding: 30px;
+  background-color: #ffffff; 
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden; /* コンテンツがはみ出てもコンテナの外に出ないようにする */
+}
+
+#submitButton {
+  padding: 12px 20px;
+  font-size: 16px;
+  font-weight: 600;
+  color: white;
+  background-image: linear-gradient(180deg, #2c2c2c, #0a0a0a); /* 黒系のグラデーション */
+  border: none;
+  border-radius: 20px; /* 丸みを帯びたボタン */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4); /* シャドウも少し濃く */
+  cursor: pointer; /* カーソルをポインターに */
+  transition: all 0.3s ease; /* スムーズな状態変化 */
+  text-align: center;
+  display: inline-block; /* テキストを中央揃えに */
+  user-select: none; /* テキストの選択を無効に */
+}
+
+#submitButton:hover {
+  background-image: linear-gradient(0deg, #2c2c2c, #0a0a0a); /* 黒系のグラデーションを逆に */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5); /* ホバー時のシャドウを強調 */
+  transform: translateY(-2px); /* ボタンを少し持ち上げる */
+}
+
+#submitButton:active {
+  background-image: linear-gradient(0deg, #0a0a0a, #2c2c2c); /* クリック時にグラデーションを逆に */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4); /* クリック時のシャドウを控えめに */
+  transform: translateY(1px); /* クリック時にボタンを少し下げる */
+}
+
+
+
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+/* 基本スタイル */
+/* ... */
+
+/* スマートフォン向けのスタイル */
+@media (max-width: 768px) {
+  body {
+    padding: 20px; /* スマホでは余白を減らす */
+  }
+
+  @media (max-width: 768px) {
+      .single-thread, .form-section {
+        width: calc(100% - 40px); /* 画面の幅から余白を引いた幅 */
+        padding: 20px;
+        margin: 20px auto;
+      }
+    
+  }
+
+  .input-section input, .input-section button {
+    width: auto; /* 入力フィールドとボタンの幅を自動にする */
+    margin: 8px 0; /* 上下の余白を追加 */
+  }
+}
+
+/* 小さなスマートフォン向けのスタイル */
+@media (max-width: 480px) {
+  body {
+    padding: 15px; /* さらに余白を減らす */
+  }
+} 
+@media (max-width: 480px) {
+    single-thread, .form-section {
+      width: calc(100% - 20px); /* より小さい画面で余白を減らす */
+      padding: 15px;
+      margin: 15px auto;
+  
+  .input-section input, .input-section button {
+    margin: 6px 0; /* 上下の余白をさらに減らす */
+  }
+    }
+  }
+
+/* ラージスマートフォン向けのスタイル */
+@media (min-width: 481px) and (max-width: 1024px) {
+  .single-thread, .form-section {
+    padding: 20px; /* タブレットサイズでは少しパディングを増やす */
+  }
+}
