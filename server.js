@@ -2,11 +2,10 @@ const express = require("express");
 const app = express();
 const mongoose = require("mongoose");
 const Thread = require("./models/Thread");
-const PORT = process.env.PORT || 3000;
+
 
 app.use(express.static("public"));
 app.use(express.json()); // これを追加する
-
 mongoose.connect(
   "mongodb+srv://enokida:abc@cluster0.kldbhmu.mongodb.net/?retryWrites=true&w=majority"
 ).then(() => {
@@ -37,7 +36,7 @@ app.post("/api/v1/thread", async(req, res) => {
   }
 });
 
-
+const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);
 });
